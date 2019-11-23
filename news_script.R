@@ -2,6 +2,14 @@ library(tidyverse)
 library(rvest)
 library(data.table)
 
+#######################################
+### Articles from Project Syndicate ###
+#######################################
+
+# The original URL does not change, i.e. it is not refreshed with page number. However, when I clicked on '2' to get to the
+# second page, only a few new things have been downloaded and only one of them are of type 'xhr'. Using this item's request URL
+# and modifying it with downloads as many articles as I provide in the 'take=' part of the URL (I have tried it with 1000).
+
 # original URL
 ps_url <- 'https://www.project-syndicate.org/section/politics-world-affairs'
 
