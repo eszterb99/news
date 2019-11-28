@@ -14,8 +14,8 @@ library(data.table)
 ps_url <- 'https://www.project-syndicate.org/section/politics-world-affairs'
 
 
-# easily modifiable URL
-ps_url <- 'https://www.project-syndicate.org/section/politics-world-affairs/commentaries?take=100'
+# easily modifiable URL - not used, just for demonstration
+ps_url <- 'https://www.project-syndicate.org/section/politics-world-affairs/commentaries?take=10'
 
 scrap_project_syndicate <- function(section_name, nr_of_articles) {
   
@@ -54,7 +54,6 @@ scrap_project_syndicate <- function(section_name, nr_of_articles) {
     unlist()
   
   # authors
-  # to work on: get all authors, not only first
   ps_authors <- ps_page %>% 
     html_nodes('li') %>% 
     html_nodes("[class='listing listing--default ']") %>% 
